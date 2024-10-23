@@ -104,7 +104,7 @@ function startScrolling() {
         if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
             gallery.scrollLeft = 0; // Reset to start
         }
-    }, 2500); // Change the interval time as needed
+    }, 1500); // Change the interval time as needed
 }
 
 function pauseScrolling() {
