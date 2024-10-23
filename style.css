@@ -1,0 +1,1002 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+}
+
+.navbar {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter:brightness(160%);
+    border-radius: 0px;
+    padding: 32px;
+    list-style-type: none;
+    margin: 0;
+    backdrop-filter: blur(20px);
+    position: relative; /* Ensures the button's absolute positioning is relative to this navbar */
+    z-index: 5; /* Ensures the main navbar is behind the login button */
+}
+
+.second-navbar {
+    font-size: 1em;
+    display: flex;
+    color: #71d374;
+    justify-content:left;
+    align-items: center;
+    border-radius: 0px 0px 0px 40px;
+    padding: 15px;
+    list-style-type: none;
+    margin: 0;
+    position: relative; /* Positioned relative to the main navbar */
+    top: 0;
+    backdrop-filter: blur(20px); /* Adds blur effect */
+    z-index: 1; /* Ensures the second navbar is behind the login button */
+    background-image: linear-gradient(45deg, rgb(51, 255, 0) 1%, rgb(9, 109, 9) 10%, rgb(0, 0, 0));
+}
+
+.call {
+    position: absolute;
+    top: 30px; /* Move it down enough to overlap the second navbar */
+    right: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 12px;
+    padding-left: 3px;
+    width: 17em; /* Adjust width for larger button */
+    z-index: 10; /* Ensure it overlaps both navbars */
+    filter: drop-shadow( 4px 8px rgba(0, 0, 0, 0.2));
+    font-size: 1em; /* Increase font size for text */
+}
+
+.call img {
+    filter: brightness(70%) contrast(150%);
+    height: 3.2em; /* Fixed size for the icon */
+    width: 3.2em;  /* Fixed size for the icon */
+    margin-right: 1em;
+}
+
+.call span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.dropbtn {
+    font-size: 1.2em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between; /* More compact */
+    width: 50%;
+}
+
+.nav-items li {
+    list-style-type: none; /* Corrected list style */
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25em;
+    padding: 0 0.5em; /* Adds horizontal padding for compactness */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 7em;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    left: 5em;
+    bottom: 50%; /* Adjusted to move them further down */
+}
+
+.socials button {
+    background-color: transparent; /* Removes white background */
+    border: none; /* Removes any button border */
+    width: 3.8em; /* Fixed width */
+    height: 3.8em; /* Fixed height */
+    border-radius: 50%; /* Makes it circular */
+    overflow:visible; /* Prevents overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials img {
+    width: 100%; /* Fill the button */
+    height: 100%; /* Fill the button */
+    object-fit:contain;/* Prevents distortion */
+}
+
+.text-content {
+    width: 40%;
+    text-align: left;
+    color: white;
+}
+
+.tagline {
+    font-size: 3.5em;
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgb(138, 180, 137), orange, rgb(24, 241, 60), rgb(27, 213, 255));
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.762));
+    background-size: 400% 100%; /* Set the size to allow for animation */
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent for gradient */
+    animation: gradientAnimation 5s ease infinite; /* Add animation */
+    font-weight: bold; /* Make the text bold */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.tagline2 {
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.getstarted button,
+.contactus button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px green; /* Green glow */
+}
+
+.contactus button {
+    background-color: transparent;
+    color: green;
+    border: 0.15em solid green;
+}
+
+.contactus button:hover,
+.getstarted button:hover {
+    box-shadow: 0 0 10px rgb(85, 251, 85); /* Green glow */
+    background-color: rgb(62, 209, 94);
+    color: white;
+    border: 0.15em solid rgb(2, 130, 6);
+}
+
+.img1 {
+    position: relative;
+    right: 5em;
+    max-width: 40%;
+}
+
+.img1 img {
+    width: 31em; 
+    height: auto;
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f995;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+@media (max-width: 600px) {
+    .nav-items {
+        display: none;
+    }
+
+    .call {
+        width: 100%;
+    }
+
+    .text-content {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .socials {
+        left: 1em;
+    }
+
+    .img1 {
+        display: none;
+    }
+}
+
+/* Intro Animation - Green Background */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it overlays other content */
+}
+
+/* Intro Image Shrinking and Moving */
+.intro-image {
+    width: 18em;
+    height: 18em;
+    animation: shrinkLeft 1s forwards ease-in;
+}
+
+.intro-text {
+    position: absolute;
+    color: white;
+    bottom: 25%;
+    right: 28%;
+    font-size: 4.5em;
+    opacity: 0;
+    margin-left: 3px; /* Space between image and text */
+    animation: fadeInText 1s ease-out 1.5s forwards;
+}
+
+/* Shrink image to the left and move it */
+@keyframes shrinkLeft {
+    0% {
+        width: 18em;
+        height: 18em;
+        transform: translateX(0);
+    }
+    100% {
+        width: 10em;
+        height: 10em;
+        transform: translateX(-250px); /* Adjust this value to fit positioning */
+    }
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade out the green page smoothly */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0;
+        display: none;
+    }
+}
+
+.card-group {
+    display: flex;
+    justify-content: space-evenly; /* Ensures equal spacing */
+    gap: 5px; /* Minimal gap between the cards */
+    padding: 1rem;
+    margin: 0;
+}
+
+.card {
+    background: black;
+    padding: 1rem;
+    flex: 1; /* Cards take equal space */
+    text-align: center;
+    max-width: calc(25% - 2px); /* Adjusted for four cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    background: linear-gradient(120deg, rgb(0, 255, 38), 8%, rgb(0, 0, 5));
+    border-bottom: 5px solid rgb(4, 252, 4);
+    border-radius: 5%;
+    transform: translateY(-10px); /* Move up slightly on hover */
+}
+
+.card-title1, .card-title2, .card-title3, .card-title4 {
+    font: bold 40px Castellar; 
+    color: white;
+}
+
+.card-text {
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Bookman Old Style', serif;
+}
+
+.background2 {
+    display: flex;
+    flex-direction: column; /* Keep the card group and about section in a column */
+    padding: 2rem;
+}
+
+.about {
+    display: flex; /* Use flexbox to align image and about content */
+    margin: 4em 0;
+    align-items: center; 
+}
+
+.imageabout {
+    flex: 0 0 auto; /* Prevent the image from growing */
+    margin-right: 3em; /* Space between image and content */
+}
+
+.imageabout img {
+    max-width: 500px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round the corners of the image */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; /* Space between items */
+    flex: 1; /* Allow the about section to take the remaining space */
+}
+
+.aboutblue {
+    background-color: rgb(0, 255, 21);
+    border-radius: 5px; /* Adjusted radius */
+    color: rgb(0, 0, 0);
+    font-family: 'Malgun Gothic', serif;
+    padding: 0.5em 1em; 
+    font-size: 1rem;
+    align-items: center;
+    width: 30%;
+    display: inline-block; /* Keeps it as small as needed for text */
+}
+
+.aboutintro {
+    font-size: 3rem; /* Make the "24/7 Cyber Security Operation Center" bigger */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem; 
+}
+
+.box {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem; /* Space between each box */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to boxes */
+    width: 100%; /* Make boxes take full width */
+    max-width: 500px; /* Limit the max width of boxes */
+    text-align: left; /* Align text to the left inside the box */
+}
+
+.aboutheader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem; /* Space between the header and content */
+}
+
+.aboutcontent {
+    font-size: 1rem;
+    color: #d8d5d5;
+    font-style: italic;
+}
+
+.tick-sign {
+    color: rgb(0, 229, 255); /* Blue color */
+    font-size: 1.5rem; /* Adjust the size if needed */
+    margin-right: 0.5rem; /* Optional: space between tick and text */
+}
+
+.box {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.75s ease; /* Animate opacity and position */
+}
+
+.box.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0);
+    background: linear-gradient(120deg, rgb(0, 255, 38), 8%, rgb(0, 0, 5));
+}
+
+.scrolling-bar {
+    width: 100%;
+    height: 3.5em;
+    overflow: hidden;
+    background-color: rgb(0, 68, 255);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 2em;
+    color: white;
+    animation: scrollText 33s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.page4 {
+    display: flex;
+    gap: 2rem; /* Space between the image and FAQ content */
+    padding: 2rem;
+}
+
+.imagequestions {
+    margin-right: 2em;
+    right: 50%;
+    flex: 0 0 auto; /* Prevent the image from shrinking or growing */
+}
+
+.imagequestions img {
+    max-width: 400px; /* Adjust the size of the image */
+    width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Maintain aspect ratio inside the circle */
+    border: 4px solid white; /* Optional: Add a white border */
+}
+
+.questionscontent {
+    flex: 1; /* Take the remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 3%;
+    width: 100%; /* Ensure FAQ content wraps properly */
+}
+
+.questionsintro {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.questionsbox {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, width 0.5s ease-in-out; /* Smooth width transition */
+    max-width: 100%;
+}
+
+.questionsbox:hover {
+    background-color: rgba(0, 229, 255, 0.2);
+}
+
+.answer {
+    display: none; /* Hide the answer by default */
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #d8d5d5;
+    font-style: italic;
+    width: 0; /* Initially set width to 0 */
+    overflow: hidden;
+    transition: width 0.5s ease-in-out; /* Smooth width transition */
+}
+
+.questionsbox.active .answer {
+    display: block;
+    width: 50%; /* Expand to 50% width when active */
+}
+
+.container {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.heading {
+    color: blue;
+    font-size: 2rem; /* h3 equivalent */
+    margin-bottom: 0.5em;
+    filter: drop-shadow(10px 8px 4px #000000);
+}
+
+.subheading {
+    font-size: 3rem; /* h1 equivalent */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2em;
+    filter: drop-shadow(10px 5px 5px #3fd9e4);
+}
+
+.page3, .page1, .page5, .cust, .newscontainer{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color:aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 2em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+
+.price-per-month {
+    color: lightgray;
+    font-size: 1rem;
+}
+
+.points {
+    list-style: none;
+    padding: 0;
+    color:#71d374;
+    margin: 2em 0;
+    text-align: left;
+}
+
+.points li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.points li::before {
+    content: "✔"; /* Check mark */
+    color: blue; /* Tick color */
+    position: absolute;
+    left: 0;
+}
+
+.buttonp {
+    background: transparent;
+    border: 2px solid green;
+    color: green;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-top: 1.75em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.buttonp:hover {
+    background-color: green; /* Change to green on hover */
+    color: white; /* Change text color */
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.519);
+    border-radius: 10px;
+    padding: 12px;
+    padding-left: 3px;
+    width: 17em;/* Adjust width for larger button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1em; /* Increase font size for text */
+    margin: auto; /* Center the description and add margin */
+}
+
+.description img {
+    filter: brightness(70%) contrast(150%);
+    height: 3.2em; /* Fixed size for the icon */
+    width: 3.2em;  /* Fixed size for the icon */
+    margin-right: 1em;
+}
+
+.content {
+    color: white; /* Make all text white */
+    text-align: center; /* Center the content text */
+}
+
+.email-signup, .contact-info, .copyright {
+    margin: 2em 0;
+}
+
+.copyright {
+    border-top: 1px solid gray; /* Add a line above the copyright */
+    padding-top: 1em;
+    margin-top: 2em;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.page5 {
+    padding-top: 2em; /* Add padding to create space above the description */
+    position: relative; /* Ensure positioning for the absolute elements */
+}
+
+.pageadd1 {
+    padding-top: 2em;
+    position: relative;
+    background-image: linear-gradient(45deg, rgb(51, 255, 0), rgb(9, 109, 9) 40%, rgb(0, 0, 0));
+    color: white;
+    filter: drop-shadow(0px 3px 3px black);
+    text-align: center;
+}
+
+.customerheading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.gallery {
+    backdrop-filter: blur(20px);
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color:rgba(0, 0, 0, 0.638);
+}
+
+.customercarousel {
+    display: flex;
+}
+
+.cust {
+    min-width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cust:hover {
+    transform: scale(1.05);
+    filter: brightness(0.65) saturate(0) ;
+}
+
+.cust h3, .cust .comp {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    filter: drop-shadow( 1px 1px 1px black);
+    bottom: 50px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.cust .review {
+    position: absolute;
+    bottom: 0;
+    font-style: italic;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.737);
+}
+
+.customerspace {
+    padding-bottom: 90px;
+}
+
+.cust:hover .review {
+    opacity: 1;
+    transform: translateY(0);
+    overflow: visible;
+}
+
+.cust:hover h3,
+.cust:hover .comp {
+    transform: translateY(-60px);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery {
+    scrollbar-width: none;
+}
+
+/* Container for the sidebar and the carousel */
+.newscontainer {
+    display: flex;
+    height: 100vh;
+    background-image: url('newsbackground.png');
+    background-size: cover; /* Ensures background fills the container */
+    background-position: center;
+    position: relative;
+}
+
+/* Sidebar for Cybersecurity news */
+.newssidebar {
+    border:3px 3px 3px 3px #000000;
+    width: 40%; /* Sidebar takes 40% of the width */
+    background-color: rgba(51, 255, 0, 0.9); /* Green background with slight transparency */
+    padding: 20px;
+    margin-left: auto; /* Aligns the sidebar to the right */
+    margin-right: 20px; /* Space from the right edge */
+    z-index: 10; /* Ensure the sidebar stays on top of the background */
+}
+
+/* Heading styles with the fire effect */
+.news-heading {
+    font-size: 5em; /* Size of the heading */
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff; /* Default fallback color */
+}
+
+.news-heading span {
+    display: block;
+    background-image: url('fire.png');
+    filter: drop-shadow(1px 8px 8px rgba(0, 0, 0, 0.762));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent for gradient */
+    -webkit-animation: fire 4s ease infinite; /* Add animation */
+    font-weight: bold; /* Make the text bold */
+}
+
+@keyframes fire {
+    0% {
+        background-position: 0% 5%;
+    }
+    100% {
+        background-position: 100% 60%;
+    }
+}
+
+.news-importance{
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Center the paragraph */
+    letter-spacing: .15em; /* Adjust as needed */
+}
+
+.news-content::first-letter {
+    font-size: 40px; 
+    float: left; /* Align the letter to the left */
+    margin-right: 5px; /* Add some space between the letter and text */
+    line-height: 1;
+    font-weight:lighter;
+}
+/* Content inside the sidebar */
+.news-content {
+    font-size: 16px;
+    color: black;
+}
+
+.news-content {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-stretch: expanded;
+    font-size: 20px; /* Adjust font size for content */
+}
+
+.news {
+    height: 100%;
+    width: 70%; /* Adjust width to complement sidebar */
+    display: flex;
+    justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.news-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    opacity: 0;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+    animation: carousel-animate-vertical 27s linear infinite; /* Set animation duration */
+}
+
+.news-item:nth-child(1) {
+    animation-delay: calc(27s / 9 * -2);
+}
+
+.news-item:nth-child(2) {
+    animation-delay: calc(27s / 9 * -1);
+}
+
+.news-item:nth-child(3) {
+    animation-delay: calc(27s / 9 * 0);
+}
+
+.news-item:nth-child(4) {
+    animation-delay: calc(27s / 9 * 1);
+}
+
+.news-item:nth-child(5) {
+    animation-delay: calc(27s / 9 * 2);
+}
+
+.news-item:nth-child(6) {
+    animation-delay: calc(27s / 9 * 3);
+}
+
+.news-item:nth-child(7) {
+    animation-delay: calc(27s / 9 * 4);
+}
+
+.news-item:nth-child(8) {
+    animation-delay: calc(27s / 9 * 5);
+}
+
+.news-item:nth-child(9) {
+    animation-delay: calc(27s / 9 * 6);
+}
+
+.news-item-head {
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgb(51, 255, 0), rgb(9, 109, 9) 40%, rgb(0, 0, 0));
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.news-body {
+    width: 100%;
+    background-color: rgb(51, 255, 0);
+    border-radius: 8px;
+    padding: 16px 20px 16px 70px;
+}
+
+.news-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@keyframes carousel-animate-vertical {
+    0% {
+        transform: translateY(100%) scale(0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+    10%,
+    11.11% {
+        transform: translateY(100%) scale(0.7);
+        opacity: 0.4;
+        visibility: visible;
+    }
+    11.11%,
+    22.22% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    22.22%,
+    33.33% {
+        transform: translateY(-100%) scale(0.7);
+        opacity: 0.4;
+        visibility: visible;
+    }
+    33.33% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+}

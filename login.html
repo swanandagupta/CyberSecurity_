@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Animated Login Form</title> 
+  <link rel="stylesheet" href="./login.css.css"> 
+</head> 
+<body> 
+
+     <!-- partial:index.partial.html --> 
+
+  <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+    <!-- Login Form -->
+    <div class="signin" id="login"> <!-- Assign ID here -->
+      <div class="content">
+        <h2>Sign In</h2>
+        <div class="form">
+          <div class="inputBox">
+            <input type="text" required>
+            <i>Username</i>
+          </div>
+          <div class="inputBox">
+            <input type="password" required>
+            <i>Password</i>
+          </div>
+          <div class="links">
+            <a href="#" id="forgot-password-link">Forgot Password?</a>
+            <a href="#" id="signup-link">Signup</a>
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Login">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="signup" id="signup" style="display:none;"> <!-- Assign ID here -->
+        <div class="content">
+        <h2>Sign Up</h2>
+        <div class="form"> <!-- Fixed the syntax here -->
+            <div class="inputBox">
+            <input type="text" required>
+            <i>Username</i>
+            </div>
+            <div class="inputBox">
+            <input type="password" required>
+            <i>Password</i>
+            </div>
+            <div class="password-strength" style="display: none;"></div> <!-- Password strength indicator -->
+            <div class="inputBox">
+            <input type="password" required>
+            <i>Confirm Password</i>
+            </div>
+            <small class="confirm-password-error" style="display: none; color: red;"></small> <!-- Inline error message -->
+            <div class="inputBox">
+            <input type="text" required>
+            <i>Company Name</i>
+            </div>
+            <div class="inputBox">
+            <input type="submit" value="Create Account">
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Forgot Password Form -->
+    <div class="forgot-password" id="forgot-password" style="display:none;">
+        <div class="content">
+            <h2>Forgot Password</h2>
+            <div class="form">
+                <div class="inputBox">
+                    <input type="text" required placeholder="">
+                    <i>Email</i>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send Reset Email">
+                </div>
+                <small class="error-message" style="display: none; color: red;"></small>
+            </div>
+        </div>
+    </div>
+        
+  </section> 
+  <script src="login.js.js"></script>
+</body>
+</html>
